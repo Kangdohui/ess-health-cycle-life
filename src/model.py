@@ -150,6 +150,8 @@ def main():
             "valid_minus_train_cv": (valid_metrics["MAPE"] - train_cv_metrics["MAPE_mean"]) * 100,
             "batch2_test_minus_valid": (test_metrics["MAPE"] - valid_metrics["MAPE"]) * 100,
             "batch2_test_minus_paper_target": (test_metrics["MAPE"] - PAPER_MAPE) * 100,
+            "batch2_test_minus_batch3": (test_metrics["MAPE"] - batch3_metrics["MAPE"]) * 100,
+            "batch3_test_minus_paper_target": (batch3_metrics["MAPE"] - PAPER_MAPE) * 100,
         },
         "additional_batch3": batch3_metrics,
     }

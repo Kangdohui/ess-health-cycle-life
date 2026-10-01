@@ -87,7 +87,9 @@
   "mape_gaps_percentage_points": {
     "valid_minus_train_cv": 2.9127811710811,
     "batch2_test_minus_valid": 15.462541890943687,
-    "batch2_test_minus_paper_target": 16.864483069019666
+    "batch2_test_minus_paper_target": 16.864483069019666,
+    "batch2_test_minus_batch3": 11.577639494528677,
+    "batch3_test_minus_paper_target": 5.28684357449099
   },
   "additional_batch3": {
     "n": 44,

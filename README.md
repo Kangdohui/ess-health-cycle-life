@@ -66,8 +66,10 @@ Batch 2 Ridge의 보조 지표는 MAE 131.3 cycle, RMSE 145.5 cycle, R² 0.56이
 | Valid − Train CV | +2.91 percentage point |
 | Batch 2 Test − Valid | +15.46 percentage point |
 | Batch 2 Test − 논문 기준 9.1% | +16.86 percentage point |
+| Batch 2 Test − Batch 3 추가 평가 | +11.58 percentage point |
+| Batch 3 추가 평가 − 논문 기준 9.1% | +5.29 percentage point |
 
-Batch 2와 Batch 1의 Cycle Life 분포 차이와 프로토콜 구성이 커서 hold-out 성능보다 Batch 2 성능이 낮았다. Batch 3 성능은 Batch 2보다 높았지만, 세 배치 사이의 이질성이 확인되어 외부 일반화 성능으로 단정하지 않는다.
+Batch 2와 Batch 1의 Cycle Life 분포 차이와 프로토콜 구성이 커서 hold-out 성능보다 Batch 2 성능이 낮았다. Batch 2와 Batch 3의 MAPE 차이는 11.58 percentage point이고, Batch 3도 원논문의 9.1%보다 5.29 point 높다. 두 추가 테스트 배치의 차이는 배치 구성에 따른 성능 변동을 보여 주며, Batch 3 결과만으로 외부 일반화를 단정하지 않는다.
 
 ## 결과 그림
 
