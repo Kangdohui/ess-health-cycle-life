@@ -1,0 +1,11 @@
+numpy>=2.0
+pandas>=2.2
+scipy>=1.13
+h5py>=3.11
+mat73>=0.65
+scikit-learn>=1.5
+matplotlib>=3.9
+seaborn>=0.13
+nbformat>=5.10
+joblib>=1.4
+reportlab>=4.2

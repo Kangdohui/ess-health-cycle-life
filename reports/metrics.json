@@ -1,0 +1,99 @@
+{
+  "target": "cycle_life",
+  "input_window": "first 100 cycles",
+  "unlabeled_target_cells": {
+    "Batch 1": 0,
+    "Batch 2": 8,
+    "Batch 3": 2
+  },
+  "labeled_target_cells": {
+    "Batch 1": 46,
+    "Batch 2": 39,
+    "Batch 3": 44
+  },
+  "holdout_sizes": {
+    "Batch 1 train subset": 35,
+    "Batch 1 validation": 11
+  },
+  "seed": 42,
+  "package_versions": {
+    "python": "3.14.6",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scikit_learn": "1.9.1"
+  },
+  "split": "Batch 1 grouped by charging_policy (80/20); GroupKFold on train subset; final test on Batch 2",
+  "selected_model": "Ridge",
+  "selected_hyperparameters": {
+    "model": "Ridge",
+    "model__alpha": 0.1
+  },
+  "selected_features": [
+    "early_chargetime_mean",
+    "dq_mean",
+    "dq_std",
+    "dq_mean_abs",
+    "dq_max_abs",
+    "dq_area_abs",
+    "dq_low_v_mean_abs",
+    "dq_high_v_mean_abs"
+  ],
+  "train_cv": {
+    "MAPE_mean": 0.07589160006994881,
+    "MAPE_std": 0.010584625953212367
+  },
+  "baseline_median": {
+    "train_cv": {
+      "MAPE_mean": 0.19627185157912555,
+      "MAPE_std": 0.10225326284239329
+    },
+    "valid_batch1_holdout": {
+      "n": 11,
+      "MAE": 154.8181818181818,
+      "RMSE": 192.92320657806732,
+      "MAPE": 0.1648776194259127,
+      "R2": -0.040564170553389456
+    },
+    "test_batch2": {
+      "n": 39,
+      "MAE": 342.1666666666667,
+      "RMSE": 365.8058105411135,
+      "MAPE": 0.7265645741080425,
+      "R2": -1.7815555086369406
+    },
+    "additional_batch3": {
+      "n": 44,
+      "MAE": 250.77272727272728,
+      "RMSE": 369.78399714624555,
+      "MAPE": 0.2020074808617197,
+      "R2": -0.42030522375441626
+    }
+  },
+  "valid_batch1_holdout": {
+    "n": 11,
+    "MAE": 86.76829187344055,
+    "RMSE": 105.99270125925645,
+    "MAPE": 0.10501941178075981,
+    "R2": 0.6859116375372374
+  },
+  "test_batch2": {
+    "n": 39,
+    "MAE": 131.26371330298048,
+    "RMSE": 145.48779541380355,
+    "MAPE": 0.25964483069019667,
+    "R2": 0.5600131893693039
+  },
+  "paper_test_mape_target": 0.091,
+  "mape_gaps_percentage_points": {
+    "valid_minus_train_cv": 2.9127811710811,
+    "batch2_test_minus_valid": 15.462541890943687,
+    "batch2_test_minus_paper_target": 16.864483069019666
+  },
+  "additional_batch3": {
+    "n": 44,
+    "MAE": 174.9220875499257,
+    "RMSE": 278.0864769579888,
+    "MAPE": 0.1438684357449099,
+    "R2": 0.1967602369577015
+  }
+}
